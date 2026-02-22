@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Arpita Dey ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="pageLoader" aria-live="polite">
+    <div class="loader-orb"></div>
+    <h2>Loading Birthday Surprise for Arpita Dey ✨</h2>
+  </div>
+
+  <div id="sectionTransition" aria-hidden="true">
+    <div class="mini-spinner"></div>
+  </div>
+
+  <div id="hud">
+    <div id="progressWrap"><div id="progressBar"></div></div>
+    <div id="sectionLabel">Welcome 💖</div>
+  </div>
+
+  <div id="swipeHint">Swipe left/right to move between sections</div>
+
+  <div id="quickNav" aria-label="Quick section navigation">
+    <button class="quick-dot active" data-index="0" aria-label="Go to Welcome"></button>
+    <button class="quick-dot" data-index="1" aria-label="Go to Celebration"></button>
+    <button class="quick-dot" data-index="2" aria-label="Go to Music"></button>
+    <button class="quick-dot" data-index="3" aria-label="Go to Life Clock"></button>
+    <button class="quick-dot" data-index="4" aria-label="Go to Game"></button>
+  </div>
+
+  <section id="hero" class="active" style="background-image:url('arpita1.jpg')">
+    <h1>Happy Birthday Arpita Dey ❤️</h1>
+    <div id="shortcutHint">Shortcuts: N/P • M music • C confetti • G game</div>
+    <div id="messageBox"></div>
+    <div class="control-row">
+      <button id="pauseTypingBtn" class="control-btn">Pause Message</button>
+      <button id="surpriseBtn" class="control-btn">Surprise Line ✨</button>
+    </div>
+    <div id="surpriseLine"></div>
+    <div class="session-bar">
+      <button onclick="nextSection()">Next</button>
+    </div>
+  </section>
+
+  <section id="confetti" style="background-image:url('arpita2.jpg')">
+    <h2>Celebration 🎉🎈</h2>
+    <div id="confettiBox"><canvas id="confettiCanvas"></canvas></div>
+    <div class="control-row">
+      <button class="round-btn" onclick="launchConfetti()">Celebrate</button>
+      <button id="autoConfettiBtn" class="control-btn">Auto Burst: Off</button>
+    </div>
+    <div class="session-bar">
+      <button onclick="prevSection()">Previous</button>
+      <button onclick="nextSection()">Next</button>
+    </div>
+  </section>
+
+  <section id="music" style="background-image:url('arpita3.jpg')">
+    <h2>Romantic Music 🎶</h2>
+    <div id="musicBox">
+      <div id="trackTitle">Now Playing: Romantic Vibes</div>
+      <div class="control-row">
+        <button class="music-btn" onclick="toggleMusic()">Play/Pause</button>
+      </div>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+      <audio id="bgMusic" src="romantic.mp3" loop></audio>
+    </div>
+    <div class="session-bar">
+      <button onclick="prevSection()">Previous</button>
+      <button onclick="nextSection()">Next</button>
+    </div>
+  </section>
+
+  <section id="closing" style="background-image:url('arpita4.jpg')">
+    <h2>Your Real-Time Age</h2>
+    <div id="ageClock"></div>
+    <div id="nextBirthday"></div>
+    <div class="session-bar">
+      <button onclick="prevSection()">Previous</button>
+      <button onclick="nextSection()">Next</button>
+    </div>
+  </section>
+
+  <section id="game" style="background-image:url('arpita5.jpg')">
+    <h2>Birthday Breakout Game 🎂💕</h2>
+    <div id="gameBox">
+      <canvas id="gameCanvas" width="500" height="400"></canvas>
+      <div id="gameControls">
+        <button id="btnLeft" class="touch-btn" aria-label="Move paddle left">⬅ Left</button>
+        <button id="btnRight" class="touch-btn" aria-label="Move paddle right">Right ➡</button>
+      </div>
+      <div id="gameMeta">
+        <div class="meta-pill" id="lives">Lives: 3</div>
+        <div class="meta-pill" id="bestScore">Best: 0</div>
+        <div class="meta-pill" id="speed">Speed: 2.8</div>
+      </div>
+      <div class="control-row">
+        <button id="restartGameBtn" class="control-btn">Restart Game</button>
+        <button id="pauseGameBtn" class="control-btn">Pause</button>
+        <button id="turboModeBtn" class="control-btn">Turbo: Off</button>
+      </div>
+      <div id="score">Score: 0</div>
+      <div id="winnerMessage"></div>
+    </div>
+    <div class="session-bar">
+      <button onclick="prevSection()">Previous</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
